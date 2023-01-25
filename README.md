@@ -11,6 +11,19 @@ xcode-select install
 - You will need CMake. I got this using [Homebrew](https://brew.sh/). Follow the instructions to install homebrew then run:
 ```
 brew install cmake
+brew install check
 ```
 - Download and put the script `build_libmo_unpack.sh` where you want to download the code
 - Run the script by doing `./build_libmo_unpack.sh`
+- At the end of this script you will be asked for your sudo password, it will then install the library and tell you where it put it. For me this was in `/usr/local/lib` and `usr/local/include`
+- Next download the `mo_pack` source code:
+```
+git clone https://github.com/SciTools/mo_pack
+```
+- cd into `mo_pack`, activate the conda environment you want to install it in  and then run:
+```
+python setup.py build_ext -I/usr/local/include -L/usr/local/lib -R/usr/local/lib
+pip install -e .
+```
+
+You should be good to go!
