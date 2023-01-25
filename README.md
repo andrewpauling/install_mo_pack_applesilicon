@@ -8,5 +8,9 @@ To install, we need to first build and install the package `libmo_unpack`, more 
 ```
 xcode-select install
 ```
+- You will need CMake. I got this using [Homebrew](https://brew.sh/). Follow the instructions to install homebrew then run:
+```
+brew install cmake
+```
 - Download and put the script `build_libmo_unpack.sh` where you want to download the code
 - Run the script by doing `./build_libmo_unpack.sh`
